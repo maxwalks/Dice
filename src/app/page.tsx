@@ -32,7 +32,7 @@ export default function Home () {
   return (
     <div className="flex justify-center items-center h-[100vh] flex-col gap-4">
       <p className="text-2xl">{diceState.result ? `Dice face: ${diceState.result}` : "Please roll the dice!"}</p>
-      <Image src={diceState.imagePath ?? "/dice-six-faces-one.svg"} alt="Dice image"  width={100} height={100}/>
+      <Image src={diceState.imagePath ?? "/dice-six-faces-one.svg"} alt="Dice image"  width={100} height={100} priority={true} />
       <Button onClick={rollDice}>Roll dice</Button>
     </div>
   )
